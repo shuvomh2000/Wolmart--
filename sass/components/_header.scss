@@ -1,0 +1,351 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+
+/* Header part start */
+#header_part{
+    background-color: #f5f6f8;
+    height: 45px;
+    .header_left{
+        p{
+            @include font_style(#333, 12px, 400, 'Poppins'); 
+            line-height: 45px;
+        }
+    }
+    .header_right{ 
+        @extend %d-flex;
+        .money{
+            ul{
+                cursor: pointer;
+                i{
+                    color: #333;
+                    font-size: 10px;
+                    margin-left: 2px;
+                }
+                li{
+                    position: relative;
+                    a{
+                        @include font_style(#333, 12px, 400, 'Poppins');
+                        line-height: 45px;
+                        @include transition(.3s);
+                        &:hover{
+                            color: $cmn_color;
+                        }
+                    }
+                    ul{
+                        background-color: #fff;
+                        width: 45px;
+                        text-align: center;
+                        position: absolute;
+                        left: 0;
+                        top: 35px;
+                        visibility: hidden;
+                        opacity: 0;
+                        @include transition(.3s);
+                        li{
+                            a{
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                    &:hover{
+                        ul{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .country{
+            margin: 0 15px;
+            ul{
+                cursor: pointer;
+                img{
+                    margin-top: -3px;
+                }
+                i{
+                    color: #333;
+                    font-size: 10px;
+                    margin-left: 2px;
+                }
+                li{
+                    position: relative;
+                    a{
+                        @include font_style(#333, 12px, 400, 'Poppins');
+                        line-height: 45px;
+                        @include transition(.3s);
+                        &:hover{
+                            color: $cmn_color;
+                        }
+                    }
+                    ul{
+                        background-color: #fff;
+                        width: 65px;
+                        text-align: center;
+                        position: absolute;
+                        left: 0;
+                        top: 35px;
+                        visibility: hidden;
+                        opacity: 0;
+                        @include transition(.3s);
+                        img{
+                            margin-top: -3px;
+                        }
+                        li{
+                            a{
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                    &:hover{
+                        ul{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .devider{
+            width: 1px;
+            height: 25px;
+            background-color: #ccc;
+            margin: 10px 8px;
+        }
+        .header_menu{
+            ul{
+                @extend %d-flex;
+                li{
+                    a{
+                        @include font_style(#333, 12px, 400, 'Poppins');
+                        line-height: 45px;
+                        padding: 0 10px;
+                        @include transition(.3s);
+                        &:hover{
+                            color: $cmn_color;
+                        }
+                    }
+                }
+            }
+        }
+        .sign_in{
+            // position: relative;
+            cursor: pointer;
+            margin-left: 15px;
+            &:hover{
+                p{
+                    color: $cmn_color;
+                }
+                i{
+                    color: $cmn_color;
+                }
+            }
+            p{
+                @include font_style(#333, 12px, 400, 'Poppins');
+                line-height: 45px;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    right: -12px;
+                    top: 0;
+                    height: 25px;
+                    border-right: 10px solid #ccc;
+                    margin-top: 10px;
+                    clip-path: polygon(58% 0, 70% 0, 12% 100%, 0% 100%);
+                    @include transition(.3s);
+                }
+                i{
+                    color: #333;
+                    font-size: 12px;
+                    @include transition(.3s);
+                }
+            }
+        }
+        .register{
+            p{
+                @include font_style(#333, 12px, 400, 'Poppins');
+                line-height: 45px;
+                margin-left: 10px;
+                cursor: pointer;
+                @include transition(.3s);
+                &:hover{
+                    color: $cmn_color;
+                }
+            }
+        }
+    }
+}
+#header_part .header_right .register p {
+	margin-left: -3px;
+}
+.sign_in{
+    .modal-body{
+        ul{
+            @extend %d-flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #ccc;
+            
+               li{
+                   @include transition(.3s); /* transition not working */
+                   button{
+                       padding: 0 20px;
+                   }
+                   &:hover{
+                        button{
+                            color: $cmn_color;
+                            border-bottom: 2px solid $cmn_color;
+                        }
+                   }
+               }
+        }
+    }
+    .signin_form{
+        label{
+            @include font_style(#666, 14px, 400, "Poppins");
+        }
+        .form-control{
+            @include font_style(#999, 14px, 400, "Poppins");
+            height: 45px;
+            border: 1px solid #ccc;
+            @include b_radius(2px);
+        }
+        .form-check-input{
+            border: 1px solid #ccc;
+            cursor: pointer;
+            @include b_radius(0);
+            &:checked{
+                background-color: #333;
+                border-color: #333;
+            }
+        }
+        .label_text{
+            @extend %d-flex;
+            justify-content: space-between;
+            label{
+                a{
+                    @include font_style(#a94442, 14px, 400, "Poppins");
+                    @include transition(.3s);
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .btn{
+            @include font_style(#fff, 14px, 600, "Poppins");
+            background-color: $cmn_color;
+            border-color: $cmn_color;
+            @include b-radius(0);
+            text-transform: uppercase;
+            width: 100%;
+            margin-top: 5px;
+            &:hover{
+                background-color: #3c78b4;
+                border-color: #3c78b4;
+            }
+        }
+    }
+    .privacy_policy{
+        margin: 20px 0;
+        span{
+            @include font_style(#666, 14px, 400, "Poppins");
+            padding-right: 14px;
+            margin-top: 20px;
+        }
+        h6{
+            a{
+                @include font_style(#0d6efd, 14px, 400, "Poppins");
+                margin-top: 10px;
+                &:hover{
+                    color: #0a58ca;
+                }
+            }
+        }
+    }
+}
+
+#header_part .header_right .sign_in .social_link{
+    p {
+        @include font_style(#333, 14px, 400, "Poppins");
+        line-height: 45px;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .social_icon{
+        @extend %d-flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        .fb{
+            color: #1b4f9b;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            @include b-radius(50%);
+            border: 1px solid #1b4f9b;
+            @include transition(.3s);
+            &:hover{
+                color: #fff;
+                background-color: #1b4f9b;
+            }
+        }
+        .twit{
+            color: #00adef;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            @include b-radius(50%);
+            border: 1px solid #00adef;
+            @include transition(.3s);
+            margin: 0 10px;
+            &:hover{
+                color: #fff;
+                background-color: #00adef;
+            }
+        }
+        .goo{
+            color: #dd4b39;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            @include b-radius(50%);
+            border: 1px solid #dd4b39;
+            &:hover{
+                color: #fff;
+                background-color: #dd4b39;
+            }
+        }
+    }
+} 
+.register{
+    p{
+        &::after{
+            display: none;
+        }
+    }
+}
+.sign_in .nav-pills .nav-link, 
+.nav-pills .show > .nav-link {
+    @include font_style(#333, 20px, 700, "Poppins");
+    text-transform: uppercase;
+    background-color: transparent;
+    @include b_radius(0);
+    width: 100%;
+}
+.sign_in .nav-pills .nav-link.active{
+    color: $cmn_color;
+    border-bottom: 2px solid $cmn_color;
+} 
+/* Header part end */
+
+
+
+
+
+ 

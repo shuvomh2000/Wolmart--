@@ -1,0 +1,128 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+
+.popup_part {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.5);
+    z-index: 9999;
+
+    .popup_content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        height: 400px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        background: url(../../images/home/popup.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include b-radius(10px);
+        padding: 90px 40px;
+
+        h4 {
+            @include font_style(#333, 20px, 400, "Poppins");
+            margin-bottom: 10px;
+
+            span {
+                @include font_style($cmn_color, inherit, 800, inherit);
+
+            }
+        }
+
+        h2 {
+            @include font_style(#333, 28px, 800, "Poppins");
+            margin-bottom: 10px;
+
+        }
+
+        p {
+            @include font_style(#999, 14px, 400, "Poppins");
+            margin-bottom: 10px;
+
+        }
+
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 10px;
+
+
+            input {
+                display: inline-block;
+                width: 40%;
+                padding: 8px 20px;
+                @include b-radius(50px);
+                @include font_style(#666, 14px, 400, "Poppins");
+                border-color: #ddd;
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &::-moz-placeholder {
+                    @include font_style(#999, 14px, 400, "Poppins");
+
+                }
+
+            }
+
+            button {
+                position: absolute;
+                left: 250px;
+                top: 0;
+                padding: 9.2px 20px;
+                border: 0;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+                @include font_style(#fff, 14px, 600, "Poppins");
+                &:hover{
+                    background-color: #444;
+                }
+
+            }
+        }
+        .form-checkbox{
+            input{
+                cursor: pointer;
+            }
+            label{
+                margin-left: 5px;
+                @include font_style(#333, 14px, 400, "Poppins");
+
+            }
+        }
+
+        .close_button {
+            position: absolute;
+            right: 0;
+            top: -40px;
+
+            i {
+                font-size: 25px;
+                color: #fff;
+                cursor: pointer;
+                @include transition(.3s);
+
+                &:hover {
+                    transform: rotate(90deg) scale(1.5);
+                    -webkit-transform: rotate(90deg) scale(1.5);
+                    -moz-transform: rotate(90deg) scale(1.5);
+                    -ms-transform: rotate(90deg) scale(1.5);
+                    -o-transform: rotate(90deg) scale(1.5);
+                }
+            }
+        }
+    }
+}

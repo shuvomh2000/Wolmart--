@@ -1,0 +1,321 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+@import "../extends/flex";
+
+#consumer_part{
+    margin-top: 60px;
+    .title_wrapper{
+        margin-bottom: 35px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -15px;
+            width: 100%;
+            height: 1px;
+            background-color: #ddd;
+        }
+        .title_left{
+            h2{
+                @include font_style(#333, 20px, 700, "Poppins");
+            }
+        }
+        .title_right{
+            a{
+                span{
+                    @include font_style(#333, 14px, 600, "Poppins");
+                }
+                &:hover{
+                    span{
+                        color: $cmn_color;
+                    }
+                }
+            }
+        }
+    }
+    .camera_wrapper{
+        .cameraLeft{
+            margin-right: 20px;
+            .cameraLeft_img{
+                position: relative;
+                img{
+                    @include b-radius(3px);
+                }
+                &:hover{
+                    .ovly{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+            .ovly{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(247, 234, 234, 0.1);
+                visibility: hidden;
+                opacity: 0;
+                
+            }
+            .cameraLeft_text{
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding-top: 30px;
+                padding-left: 30px;
+                p{
+                    @include font_style(#fff, 18px, 400, "Poppins");
+                    margin-bottom: 23px;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        bottom: -15px;
+                        width: 40px;
+                        height: 3px;
+                        background-color: #fff;
+                    }
+                }
+                h2{
+                    @include font_style(#fff, 27px, 700, "Poppins");
+                    text-transform: uppercase;
+                    span{
+                        text-transform: capitalize;
+                        font-weight: 400;
+                    }
+                }
+                a{
+                    @include font_style(#fff, 13px, 700, "Poppins");
+                    text-transform: uppercase;
+                    padding: 5px 20px;
+                    border: 2px solid #fff;
+                    @include b-radius(3px);
+                    margin-top: 20px;
+                    &:hover{
+                        background-color: #fff;
+                        color: $cmn_color;
+                        @include transition(.3s);
+                    }
+                }
+            }
+        }
+        
+        .cameraRight{
+            .cameraRight_img{
+                position: relative;
+                cursor: pointer;
+                .main_img{
+                    margin-bottom: 15px;
+                }
+                .hover_img{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    display: none;
+                }
+                &:hover{
+                    .hover_img{
+                        display: block;
+                    }
+                    .ovly{
+                        ul{
+                            li{
+                                a{
+                                    i{
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .discount{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    padding: 20px;
+                    p{
+                        @include font_style(#fff, 12px, 400, "Poppins");
+                        padding: 3px 8px;
+                        background-color: #ec7709;
+                        @include b-radius(3px);
+                    }
+                }
+                .ovly{
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    ul{
+                        li{
+                            a{
+                                i{
+                                    width: 30px;
+                                    height: 30px;
+                                    background-color: #fff;
+                                    font-size: 12px;
+                                    color: #999;
+                                    text-align: center;
+                                    line-height: 30px;
+                                    margin: 3px 0;
+                                    @include b-radius(50%);
+                                    @include transition(.3s);
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    &:hover{
+                                        background-color: $cmn_color;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .cameraRight_text{
+                margin-top: -8px;
+                a{
+                    @include font_style(#333, 13px, 500, "Poppins");
+                    &:hover{
+                        color: $cmn_color;
+                    }
+                }
+                .review{
+                    position: relative;
+                    margin-top: -4px;
+                    a{
+                        color: #ccc;
+                        font-size: 12px;
+                        span{
+                            &:hover{
+                                color: $cmn_color;
+                            }
+                        }
+                    }
+                    .review_hover{
+                        p{
+                            @include font_style(#fff, 12px, 400, "Poppins");
+                        }
+                        position: absolute;
+                        text-align: center;
+                        line-height: 30px;
+                        left: 55px;
+                        top: -30px;
+                        width: 20px;
+                        height: 30px;
+                        background-color: #333;
+                        visibility: hidden;
+                        opacity: 0;
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            left: 5px;
+                            bottom: -6px;
+                            width: 10px;
+                            height: 6px;
+                            background-color: #333;
+                            -webkit-clip-path: polygon(100% 0, 0 0, 48% 100%);
+                            clip-path: polygon(100% 0, 0 0, 48% 100%);
+                        }
+                    }
+                    &:hover{
+                        .review_hover{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+                p{
+                    @include font_style(#333, 16px, 600, "Poppins");
+                    del{
+                        @include font_style(#ccc, 16px, 400, "Poppins");
+                    }
+                }
+            }
+        }
+    }
+    // 25% Discount start here
+    .discount_part{
+        margin-top: 60px;
+        position: relative;
+        @include b-radius(3px);
+        .discountBanner_text{
+            h2{
+                @include font_style(#f77c29, 70px, 700, "Poppins");
+                position: relative;
+                display: inline-block;
+                padding: 30px 40px;
+                position: relative;
+                ::after {
+                    position: absolute;
+                    content: "";
+                    right: -27px;
+                    top: 50%;
+                    width: 2px;
+                    height: 80px;
+                    background-color: #666;
+                    transform: translateY(-50%);
+                }
+                b {
+                    position: absolute;
+                    color: #f77c29;
+                    font-size: 45px;
+                    font-weight: 600;
+                    font-family: "Poppins";
+                    margin-top: 5px;
+                    margin-left: 8px;
+                }
+                span {
+                    position: absolute;
+                    color: #f77c29;
+                    font-size: 20px;
+                    font-weight: 600;
+                    font-family: "Poppins";
+                    text-transform: uppercase;
+                    margin-top: 45px;
+                    margin-left: 8px;
+                }
+            }
+            h4{
+                @include font_style(#fff, 30px, 700, "Poppins");
+                text-transform: uppercase;
+                padding-left: 30px;
+            }
+            p{
+                @include font_style(#fff, 18px, 400, "Poppins");
+                text-transform: capitalize;
+                padding-left: 30px;
+                span{
+                    font-weight: 600;
+                    background-color: #fff;
+                    color: #333;
+                    padding: 0 5px;
+                    b{
+                        margin-left: 5px;
+                    }
+                }
+            }
+            a{
+                @include font_style(#fff, 15px, 400, "Poppins");
+                text-transform: uppercase;
+                padding: 10px 20px;
+                border: 2px solid #fff;
+                margin-right: 40px;
+                @include b-radius(3px);
+                @include transition(.3s);
+                &:hover{
+                    color: $cmn_color;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    // 25% Discount end here
+}

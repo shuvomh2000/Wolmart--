@@ -1,0 +1,14 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+
+#blogBanner_part{
+    background-color: #eee;
+    padding: 70px 0;
+    .blogBanner_text{
+        h1{
+            @include font_style(#333, 34px, 700, "Poppins");
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+@import "../extends/flex";
+
+#recentViews_part{
+    margin-top: 60px;
+    .title_wrapper{
+        margin-bottom: 35px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -18px;
+            width: 100%;
+            height: 1px;
+            background-color: #ddd;
+        }
+        .title{
+            h2{
+                @include font_style(#333, 20px, 700, "Poppins");
+            }
+        }
+    }
+    .view_item{
+        .view_img{
+            position: relative;
+            .ovly{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(2, 1, 1, 0.8);
+                opacity: 0;
+                visibility: hidden;
+            }
+            .ovly-text{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 1;
+                -webkit-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -o-transform: translate(-50%,-50%);
+                @include transition(.3s);
+                opacity: 0;
+                visibility: hidden;
+                a{
+                    @include font_style(#fff, 14px, 400, "Poppins");
+                    text-align: center;
+                }
+            }
+            &:hover{
+                .ovly{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .ovly-text{
+                    opacity: 1;
+                    visibility: visible;
+                    a{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

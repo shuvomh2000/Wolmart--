@@ -1,0 +1,227 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+@import "../extends/flex";
+
+#page_content {
+    margin-top: 100px;
+
+    .title {
+        h2 {
+            @include font_style(#333, 40px, 700, "Poppins");
+            // padding: 0 10px;
+        }
+
+        p {
+            @include font_style(#666, 14px, 400, "Poppins");
+            padding: 0 267px;
+            margin: 20px 0 45px;
+            line-height: 25px;
+        }
+
+        img {
+            @include b-radius(10px);
+        }
+    }
+
+    .customer {
+        margin-top: 100px;
+
+        .customer_content {
+            .title {
+                h2 {
+                    padding-right: 9px;
+                    font-size: 36px;
+                    margin: 72px 0 30px;
+
+                }
+            }
+
+            .customer_text {
+                .accordion {
+                    .accordion-item {
+                        border: 0;
+                        .accordion-header {
+                            .accordion-button {
+                                a{
+                                    @include font_style(#333, 18px, 600, "Poppins");
+                                    &:hover{
+                                        color: $cmn_color;
+                                    }
+                                }
+                                background: transparent;
+                                @include font_style(#333, 14px, 400, "Poppins");
+                                padding-left: 0;
+                                position: relative;
+
+                                &:focus {
+                                    box-shadow: none;
+                                }
+
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    right: 20px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    -webkit-transform: translateY(-50%);
+                                    -moz-transform: translateY(-50%);
+                                    -ms-transform: translateY(-50%);
+                                    -o-transform: translateY(-50%);
+                                    width: 2px;
+                                    height: 12px;
+                                    background-color: #333;
+                                    transition: transform 1s;
+                                    display: none;
+                                    -webkit-transition: transform 1s;
+                                    -moz-transition: transform 1s;
+                                    -ms-transition: transform 1s;
+                                    -o-transition: transform 1s;
+                                }
+
+                                &::before {
+                                    position: absolute;
+                                    content: "";
+                                    right: 15px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    -webkit-transform: translateY(-50%);
+                                    -moz-transform: translateY(-50%);
+                                    -ms-transform: translateY(-50%);
+                                    -o-transform: translateY(-50%);
+                                    width: 12px;
+                                    height: 2px;
+                                    background-color: #333;
+                                    transition: transform 1s;
+                                    -webkit-transition: transform 1s;
+                                    -moz-transition: transform 1s;
+                                    -ms-transition: transform 1s;
+                                    -o-transition: transform 1s;
+                                }
+                            }
+
+                            .collapsed {
+                                &::after {
+                                    display: inline-block;
+                                    transform: translateY(-50%) rotate(180deg);
+                                    -webkit-transform: translateY(-50%) rotate(180deg);
+                                    -moz-transform: translateY(-50%) rotate(180deg);
+                                    -ms-transform: translateY(-50%) rotate(180deg);
+                                    -o-transform: translateY(-50%) rotate(180deg);
+                                }
+
+                                &::before {
+                                    transform: translateY(-50%) rotate(180deg);
+                                    -webkit-transform: translateY(-50%) rotate(180deg);
+                                    -moz-transform: translateY(-50%) rotate(180deg);
+                                    -ms-transform: translateY(-50%) rotate(180deg);
+                                    -o-transform: translateY(-50%) rotate(180deg);
+                                }
+                            }
+                        }
+                        .accordion-body{
+                            // border-bottom: 1px solid #ddd;
+
+                            padding-left: 0;
+                            p{
+                                @include font_style(#333, 14px, 400, "Poppins");
+                            }
+                        }
+                    }
+                }
+            }
+            .customer_img{
+                img{
+                    @include b-radius(10px);
+                }
+            }
+        }
+    }
+    .counter{
+        margin: 100px 0;
+        .count_details{
+        
+            .count_content{
+                justify-content: center;
+                h2{
+                    @include font_style(#ccc, 60px, 800, "Poppins");
+                    margin-right: 5px;
+                    display: block;
+                }
+                span{
+                    @include font_style(#ccc, 60px, 800, "Poppins");
+                    display: block;
+                }
+                .title{
+                    display: inline-block;
+                }
+            }
+            h4{
+                @include font_style(#333, 20px, 700, "Poppins");
+                text-align: center;
+            }
+            p{
+                @include font_style(#666, 14px, 400, "Poppins");
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    }
+    .boost-section{
+        .boost_img{
+            margin-right: 30px;
+            img{
+                @include b-radius(10px);
+            }
+        }
+        .title {
+            h2{
+                @include font_style(#333, 35px, 700, "Poppins");
+            }
+            p{
+                @include font_style(#666, 14px, 400, "Poppins");
+                padding: 0;
+            }
+            a{
+                @include font_style(#fff, 14px, 600, "Poppins");
+                text-transform: uppercase;
+                padding: 12px 23px;
+                margin-top: -35px;
+                &:focus{
+                    box-shadow: none;
+                }
+                &:hover{
+                    background-color: #444;
+                }
+            }
+        }
+    }
+    .member-section{
+        margin-top: 100px;
+        .title{
+            h2{
+                font-size: 35px;
+            }
+        }
+        .member_col{
+            margin-top: 60px;
+            .member_content{
+                &:nth-child(3){
+                    .member_img{
+                        margin-top: 10px;
+                    }
+                    .member_text{
+                        margin-top: 35px;
+                    }
+                }
+                .member_text{
+                    margin-top: 25px;
+                    p{
+                        @include font_style(#333, 20px, 400, "Poppins");
+                    }
+                }
+            }
+        }
+    }
+}

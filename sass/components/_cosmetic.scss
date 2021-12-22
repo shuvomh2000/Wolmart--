@@ -1,0 +1,93 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+@import "../extends/flex";
+
+#cosmetic_part{
+    padding: 60px 0;
+    .natural{
+        position: relative;
+        .natural_img{
+            position: relative;
+            .ovly{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(64, 77, 75, 0.2);
+                visibility: hidden;
+                opacity: 0;
+            }
+            &:hover .ovly{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        .content{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            padding: 30px;
+            z-index: 1;
+            h4{
+                @include font_style(#CACCCB, 14px, 700, "Poppins");
+                text-transform: uppercase;
+            }
+            h3{
+                @include font_style(#fff, 28px, 700, "Poppins");
+                padding-right: 53px;
+                text-transform: capitalize;
+            }
+            .cosmetic_btn a{
+                @include font_style(#fff, 14px, 600, "Poppins");
+                text-transform: uppercase;
+            }
+        }
+    }
+    .trending{
+        position: relative;
+        .trending_img{
+            position: relative;
+            .ovly{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(228, 228, 228, 0.2);
+                visibility: hidden;
+                opacity: 0;
+            }
+            &:hover .ovly{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        .content{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            padding: 30px;
+            z-index: 1;
+            h4{
+                @include font_style(#646465, 14px, 700, "Poppins");
+                text-transform: uppercase;
+            }
+            h3{
+                @include font_style(#333, 28px, 700, "Poppins");
+                padding-right: 84px;
+                text-transform: capitalize;
+            }
+            .cosmetic_btn a{
+                @include font_style(#333, 14px, 600, "Poppins");
+                text-transform: uppercase;
+            }
+        }
+    }
+}

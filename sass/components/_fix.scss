@@ -1,0 +1,46 @@
+@import '../mixins/transition';
+@import '../variables/cmnColor';
+.fix {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    .left_dropDown{
+        .dropDown_mega{
+            display: none;
+        }
+        &:hover{
+            .dropDown_mega{
+                display: block;
+            }
+            >ul{
+                >li{
+                    >a{
+                        background: $cmn_color;
+                        width: 100%;
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
+}
+.scroll_btn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+    text-align: center;
+    background: $cmn_color;
+    cursor: pointer;
+    i{
+        color: #fff;
+        font-size: 16px;
+        line-height: 50px;
+    }
+}

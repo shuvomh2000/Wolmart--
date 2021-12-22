@@ -1,0 +1,96 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+
+#myAccount_part {
+    .myAcount_content {
+        .button_tab {
+            button {
+                background: transparent;
+                @include font_style(#333, 16px, 600, "Poppins");
+                padding: 10px 0;
+                text-align: left;
+                border-bottom: 1px solid #eee;
+                @include b-radius(0);
+            }
+
+            button.active {
+                color: $cmn_color;
+            }
+        }
+
+        .tab-content {
+            .dashboard_content {
+                p {
+                    @include font_style(#666, 16px, 400, "Poppins");
+
+                    span {
+                        @include font_style(#333, 16px, 600, "Poppins");
+
+                    }
+
+                    a {
+                        color: $cmn_color;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-top: 5px;
+                        font-size: 14px;
+                    }
+                }
+
+                .dashboard_icon {
+                    ul {
+                        flex-wrap: wrap;
+
+                        li {
+                            width: 31.77%;
+                            padding: 40px 0;
+                            margin-right: 20px;
+                            margin-bottom: 20px;
+                            border: 1px solid #eee;
+                            @include b-radius(3px);
+
+                            &:nth-child(3),
+                            &:last-child {
+                                margin-right: 0;
+                            }
+
+                            a {
+
+                                i {
+                                    font-size: 60px;
+                                    color: #333;
+                                    margin: 10px;
+                                    padding-left: 100px;
+                                    @include transition(.3s);
+
+                                }
+                            }
+
+                            &:hover {
+                                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+
+                                a {
+                                    i {
+                                        color: $cmn_color;
+                                        transform: scale(1.1);
+                                        -webkit-transform: scale(1.1);
+                                        -moz-transform: scale(1.1);
+                                        -ms-transform: scale(1.1);
+                                        -o-transform: scale(1.1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

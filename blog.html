@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolmart</title>
+    <link rel="icon" href="images/home/logo.png" class="img-fluid w-100">
+
+    <!-- Font awesome link up -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Flat icon link up -->
+    <link rel="stylesheet" href="fonts/flaticon/flaticon.css">
+    <!-- Slick slider link up -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- Calender link up -->
+    <link rel="stylesheet" href="css/pignose.calendar.min.css">
+    <!-- Bootstrap link up -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Main css link up -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- =======================================================================
+                            Header part start
+    ======================================================================= -->
+    <header id="header_part">
+        <div class="container px-lg-0">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="header_left">
+                        <p>Welcome to Wolmart Store message or remove it!</p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="header_right justify-content-end">
+                        <div class="money">
+                            <ul>
+                                <li><a href="#">USD</a> <i class="fas fa-chevron-down"></i>
+                                    <ul>
+                                        <li><a href="#">USD</a></li>
+                                        <li><a href="#">EURO</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="country">
+                            <ul>
+                                <li><a href="#"><img src="images/home/eng.png" alt="eng"> ENG</a> <i
+                                        class="fas fa-chevron-down"></i>
+                                    <ul>
+                                        <li><a href="#"><img src="images/home/eng.png" alt="eng"> ENG</a></li>
+                                        <li><a href="#"><img src="images/home/fra.png" alt="fra"> FRA</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="devider"></span>
+                        <div class="header_menu">
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">My Account</a></li>
+                            </ul>
+                        </div>
+                        <div class="sign_in">
+                            <!-- Button trigger modal -->
+                            <p data-bs-toggle="modal" data-bs-target="#sign_id">
+                                <i class="far fa-user"></i> Sign In
+                            </p>
+                            <!-- Modal -->
+                            <div class="modal fade" id="sign_id" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="pills-home-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+                                                        role="tab" aria-controls="pills-home" aria-selected="true">Sign
+                                                        In</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-profile-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-profile"
+                                                        type="button" role="tab" aria-controls="pills-profile"
+                                                        aria-selected="false">Sign Up</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane fade show active signin_form" id="pills-home"
+                                                    role="tabpanel" aria-labelledby="pills-home-tab">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputEmail1" class="form-label">Username
+                                                                or email address *</label>
+                                                            <input type="email" class="form-control"
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputPassword1"
+                                                                class="form-label">Password *</label>
+                                                            <input type="password" class="form-control"
+                                                                id="exampleInputPassword1">
+                                                        </div>
+                                                        <div class="mb-3 form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                id="exampleCheck1">
+                                                            <div class="label_text">
+                                                                <label class="form-check-label"
+                                                                    for="exampleCheck1">Remember me</label>
+                                                                <label><a href="#">Lost your password?</a></label>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                                        <div class="social_link">
+                                                            <p>Sign in with social account</p>
+                                                            <div class="social_icon">
+                                                                <i class="fab fa-facebook-f fb"></i>
+                                                                <i class="fab fa-twitter twit"></i>
+                                                                <i class="fab fa-google goo"></i>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tab-pane fade signin_form" id="pills-profile"
+                                                    role="tabpanel" aria-labelledby="pills-profile-tab">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputEmail2" class="form-label">Your
+                                                                Email address *</label>
+                                                            <input type="email" class="form-control"
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputPassword2"
+                                                                class="form-label">Password *</label>
+                                                            <input type="password" class="form-control"
+                                                                id="exampleInputPassword1">
+                                                            <div class="privacy_policy">
+                                                                <span>
+                                                                    Your personal data will be used to support your
+                                                                    experience throughout this website, to manage access
+                                                                    to your account, and for other purposes described in
+                                                                    our <a href="#">privacy policy</a>.
+                                                                </span>
+                                                                <h6><a href="#">Signup as a vendor?</a></h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                id="exampleCheck1">
+                                                            <div class="label_text">
+                                                                <label class="form-check-label"
+                                                                    for="exampleCheck1">Remember me</label>
+                                                                <label><a href="#">Lost your password?</a></label>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary">Sign up</button>
+                                                        <div class="social_link">
+                                                            <p>Sign in with social account</p>
+                                                            <div class="social_icon">
+                                                                <i class="fab fa-facebook-f fb"></i>
+                                                                <i class="fab fa-twitter twit"></i>
+                                                                <i class="fab fa-google goo"></i>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sign_in register">
+                            <!-- Button trigger modal -->
+                            <p data-bs-toggle="modal" data-bs-target="#sign_id"> Register
+                            </p>
+                            <!-- Modal -->
+                            <div class="modal fade" id="sign_id" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="register" data-bs-toggle="pill"
+                                                        data-bs-target="#resister_text" type="button" role="tab"
+                                                        aria-controls="resister_text" aria-selected="true">Sign
+                                                        In</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-profile-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-profile"
+                                                        type="button" role="tab" aria-controls="pills-profile"
+                                                        aria-selected="false">Sign Up</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane fade show active signin_form" id="resister_text"
+                                                    role="tabpanel" aria-labelledby="register">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputEmail1" class="form-label">Username
+                                                                or email address *</label>
+                                                            <input type="email" class="form-control"
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputPassword1"
+                                                                class="form-label">Password *</label>
+                                                            <input type="password" class="form-control"
+                                                                id="exampleInputPassword1">
+                                                        </div>
+                                                        <div class="mb-3 form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                id="exampleCheck1">
+                                                            <div class="label_text">
+                                                                <label class="form-check-label"
+                                                                    for="exampleCheck1">Remember me</label>
+                                                                <label><a href="#">Lost your password?</a></label>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                                        <div class="social_link">
+                                                            <p>Sign in with social account</p>
+                                                            <div class="social_icon">
+                                                                <i class="fab fa-facebook-f fb"></i>
+                                                                <i class="fab fa-twitter twit"></i>
+                                                                <i class="fab fa-google goo"></i>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tab-pane fade signin_form" id="pills-profile"
+                                                    role="tabpanel" aria-labelledby="pills-profile-tab">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputEmail2" class="form-label">Your
+                                                                Email address *</label>
+                                                            <input type="email" class="form-control"
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleInputPassword2"
+                                                                class="form-label">Password *</label>
+                                                            <input type="password" class="form-control"
+                                                                id="exampleInputPassword1">
+                                                            <div class="privacy_policy">
+                                                                <span>
+                                                                    Your personal data will be used to support your
+                                                                    experience throughout this website, to manage access
+                                                                    to your account, and for other purposes described in
+                                                                    our <a href="#">privacy policy</a>.
+                                                                </span>
+                                                                <h6><a href="#">Signup as a vendor?</a></h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 form-check">
+                                                            <input type="checkbox" class="form-check-input"
+                                                                id="exampleCheck1">
+                                                            <div class="label_text">
+                                                                <label class="form-check-label"
+                                                                    for="exampleCheck1">Remember me</label>
+                                                                <label><a href="#">Lost your password?</a></label>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary">Sign up</button>
+                                                        <div class="social_link">
+                                                            <p>Sign in with social account</p>
+                                                            <div class="social_icon">
+                                                                <i class="fab fa-facebook-f fb"></i>
+                                                                <i class="fab fa-twitter twit"></i>
+                                                                <i class="fab fa-google goo"></i>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- =======================================================================
+                            Header part end
+    ======================================================================= -->
+
+    <!-- =======================================================================
+                            Header logo part start
+    ======================================================================= -->
+    <section id="logo_part">
+        <div class="container px-lg-0">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo">
+                        <img src="images/home/logo.png" width="145px" alt="logo">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="logo_search">
+                        <select aria-label="Default select example">
+                            <option selected>All Categories</option>
+                            <option value="1">Fashion</option>
+                            <option value="2">Furniture</option>
+                            <option value="3">Shoes</option>
+                            <option value="3">Sports</option>
+                        </select>
+
+                        <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Search in..">
+                        <button type="submit"> <i class="fas fa-search"></i> </button>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="logo_right d-flex">
+                        <div class="logo_number">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="mailto: zhilik9536@gamil.com">
+                                <p>Live Chat <span>or :</span></p>
+                            </a>
+                            <a href="callto: 0 800 123-456">
+                                <h4>0(800)123-456</h4>
+                            </a>
+                        </div>
+                        <div class="logo_wish">
+                            <a href="#">
+                                <i class="fas fa-heart"></i>
+                                <span>Wishlist</span>
+                            </a>
+                        </div>
+                        <div class="logo_compare">
+                            <a href="#">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>Compare</span>
+                            </a>
+                        </div>
+                        <div class="logo_cart">
+                            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                aria-controls="offcanvasRight">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Cart</span>
+                                <span class="cart-count">2</span>
+                            </a>
+                        </div>
+                        <!-- Side card offcanvas start -->
+                        <div class="offcanvas offcanvas-end my_offcanvas" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 id="offcanvasRightLabel">Shopping Cart</h5>
+                                <div class="close">
+                                    <span type="button" class="" data-bs-dismiss="offcanvas" aria-label="Close">
+                                        <span class="close_btn"> Close <i class="fas fa-arrow-right"></i> </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Ofcanvas body start -->
+                            <div class="offcanvas-body cart_body">
+                                <div class="row">
+                                    <div class="col cart_top d-flex">
+                                        <div class="cart_text">
+                                            <a href="#">
+                                                <p>Beige knitted elas
+                                                    tic runner shoes</p>
+                                            </a>
+                                            <h6><span>1 X</span> $25.58</h6>
+                                        </div>
+                                        <div class="col cart_img">
+                                            <img src="images/home/product-1.jpg" alt="product-1">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col cart_top d-flex">
+                                        <div class="cart_text">
+                                            <a href="#">
+                                                <p>Beige knitted elas
+                                                    tic runner shoes</p>
+                                            </a>
+                                            <h6><span>1 X</span> $25.58</h6>
+                                        </div>
+                                        <div class="col cart_img">
+                                            <img src="images/home/product-1.jpg" alt="product-1">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subtotal">
+                                    <p>Subtotal: <span>$50.48</span> </p>
+                                </div>
+                                <div class="cart_btn d-flex text-center">
+                                    <div class="btn_one"><a href="#">View Cart</a></div>
+                                    <div class="btn_two"><a href="#">Check Out</a></div>
+                                </div>
+                            </div>
+                            <!-- Ofcanvas body end -->
+                        </div>
+                        <!-- Side card offcanvas end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================================================================
+                            Header logo part end
+    ======================================================================= -->
+
+    <!-- =======================================================================
+                            Menu part start
+    ======================================================================= -->
+    <nav id="menu_part">
+        <div class="container px-lg-0">
+            <div class="row">
+                <!-- Left dropDown menu part start -->
+                <div class="col-lg-3">
+                    <div class="left_dropDown shop_left_dropDown">
+                        <ul>
+                            <li><a href="#"> <i class="fas fa-list"></i> Browse Categories <i
+                                        class="fas fa-chevron-down"></i> </a>
+                                <div class="dropDown_mega">
+                                    <ul>
+                                        <li><a href="#"><i class="fas fa-tshirt"></i> Fashion <i
+                                                    class="fas fa-chevron-right icon_set"></i></a>
+                                            <div class="side_mega_menu">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="side_women">
+                                                            <h3>Women</h3>
+                                                            <ul>
+                                                                <li><a href="#"> New Arrivals</a></li>
+                                                                <li><a href="#">Best Sellers</a></li>
+                                                                <li><a href="#">Trending</a></li>
+                                                                <li><a href="#">Clothing</a></li>
+                                                                <li><a href="#">Shoes</a></li>
+                                                                <li><a href="#">Bags</a></li>
+                                                                <li><a href="#">Accessories</a></li>
+                                                                <li><a href="#">Jewlery & Watches</a></li>
+                                                                <li><a href="#">Sale</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="side_Men">
+                                                            <h3>Men</h3>
+                                                            <ul>
+                                                                <li><a href="#"> New Arrivals</a></li>
+                                                                <li><a href="#">Best Sellers</a></li>
+                                                                <li><a href="#">Trending</a></li>
+                                                                <li><a href="#">Clothing</a></li>
+                                                                <li><a href="#">Shoes</a></li>
+                                                                <li><a href="#">Bags</a></li>
+                                                                <li><a href="#">Accessories</a></li>
+                                                                <li><a href="#">Jewlery & Watches</a></li>
+                                                                <li><a href="#">Sale</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="side_img">
+                                                            <img src="images/home/mega_menu.jpg" class="img-fluid w-100"
+                                                                alt="mega_menu">
+                                                            <div class="side_ovly">
+                                                                <p>Get up to <span>20%Off</span></p>
+                                                                <strong>Hot Sales</strong>
+                                                                <div class="side_btn">
+                                                                    <a href="#">Shop Now <i
+                                                                            class="fas fa-arrow-right"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li><a href="#"><i class="fas fa-home"></i> Home & Garden <i
+                                                    class="fas fa-chevron-right icon_set"></i> </a>
+                                            <div class="side_mega_menu">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="side_women">
+                                                            <h3>Women</h3>
+                                                            <ul>
+                                                                <li><a href="#"> New Arrivals</a></li>
+                                                                <li><a href="#">Best Sellers</a></li>
+                                                                <li><a href="#">Trending</a></li>
+                                                                <li><a href="#">Clothing</a></li>
+                                                                <li><a href="#">Shoes</a></li>
+                                                                <li><a href="#">Bags</a></li>
+                                                                <li><a href="#">Accessories</a></li>
+                                                                <li><a href="#">Jewlery & Watches</a></li>
+                                                                <li><a href="#">Sale</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="side_Men">
+                                                            <h3>Men</h3>
+                                                            <ul>
+                                                                <li><a href="#"> New Arrivals</a></li>
+                                                                <li><a href="#">Best Sellers</a></li>
+                                                                <li><a href="#">Trending</a></li>
+                                                                <li><a href="#">Clothing</a></li>
+                                                                <li><a href="#">Shoes</a></li>
+                                                                <li><a href="#">Bags</a></li>
+                                                                <li><a href="#">Accessories</a></li>
+                                                                <li><a href="#">Jewlery & Watches</a></li>
+                                                                <li><a href="#">Sale</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="side_img">
+                                                            <img src="images/home/mega_menu2.jpg"
+                                                                class="img-fluid w-100" alt="mega_menu2">
+                                                            <div class="side_ovly">
+                                                                <p>Get up to <span>20%Off</span></p>
+                                                                <strong>Hot Sales</strong>
+                                                                <div class="side_btn">
+                                                                    <a href="#">Shop Now <i
+                                                                            class="fas fa-arrow-right"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li></i><a href="#"><i class="fas fa-laptop-medical "></i> Electronics <i
+                                                    class="fas fa-chevron-right icon_set"></i> </a>
+                                            <div class="side_mega_menu">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="side_women">
+                                                            <h3>Women</h3>
+                                                            <ul>
+                                                                <li><a href="#"> New Arrivals</a></li>
+                                                                <li><a href="#">Best Sellers</a></li>
+                                                                <li><a href="#">Trending</a></li>
+                                                                <li><a href="#">Clothing</a></li>
+                                                                <li><a href="#">Shoes</a></li>
+                                                                <li><a href="#">Bags</a></li>
+                                                                <li><a href="#">Accessories</a></li>
+                                                                <li><a href="#">Jewlery & Watches</a></li>
+                                                                <li><a href="#">Sale</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="side_Men">
+                                                            <h3>Men</h3>
+                                                            <ul>
+                                                                <li><a href="#"> New Arrivals</a></li>
+                                                                <li><a href="#">Best Sellers</a></li>
+                                                                <li><a href="#">Trending</a></li>
+                                                                <li><a href="#">Clothing</a></li>
+                                                                <li><a href="#">Shoes</a></li>
+                                                                <li><a href="#">Bags</a></li>
+                                                                <li><a href="#">Accessories</a></li>
+                                                                <li><a href="#">Jewlery & Watches</a></li>
+                                                                <li><a href="#">Sale</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="side_img">
+                                                            <img src="images/home/mega_menu.jpg" class="img-fluid w-100"
+                                                                alt="mega_menu">
+                                                            <div class="side_ovly">
+                                                                <p>Get up to <span>20%Off</span></p>
+                                                                <strong>Hot Sales</strong>
+                                                                <div class="side_btn">
+                                                                    <a href="#">Shop Now <i
+                                                                            class="fas fa-arrow-right"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li><a href="#"><i class="fas fa-chair "></i>Furniture <i
+                                                    class="fas fa-chevron-right icon_set"></i> </a>
+                                            <div class="side_mega_menu">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="side_women">
+                                                            <h3>Women</h3>
+                                                            <ul>
+                                                                <li><a href="#"> New Arrivals</a></li>
+                                                                <li><a href="#">Best Sellers</a></li>
+                                                                <li><a href="#">Trending</a></li>
+                                                                <li><a href="#">Clothing</a></li>
+                                                                <li><a href="#">Shoes</a></li>
+                                                                <li><a href="#">Bags</a></li>
+                                                                <li><a href="#">Accessories</a></li>
+                                                                <li><a href="#">Jewlery & Watches</a></li>
+                                                                <li><a href="#">Sale</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="side_Men">
+                                                            <h3>Men</h3>
+                                                            <ul>
+                                                                <li><a href="#"> New Arrivals</a></li>
+                                                                <li><a href="#">Best Sellers</a></li>
+                                                                <li><a href="#">Trending</a></li>
+                                                                <li><a href="#">Clothing</a></li>
+                                                                <li><a href="#">Shoes</a></li>
+                                                                <li><a href="#">Bags</a></li>
+                                                                <li><a href="#">Accessories</a></li>
+                                                                <li><a href="#">Jewlery & Watches</a></li>
+                                                                <li><a href="#">Sale</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="side_img">
+                                                            <img src="images/home/mega_menu.jpg" class="img-fluid w-100"
+                                                                alt="mega_menu">
+                                                            <div class="side_ovly">
+                                                                <p>Get up to <span>20%Off</span></p>
+                                                                <strong>Hot Sales</strong>
+                                                                <div class="side_btn">
+                                                                    <a href="#">Shop Now <i
+                                                                            class="fas fa-arrow-right"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li><a href="#"><i class="fas fa-heartbeat"></i>Health & Beauty </a></li>
+                                        <li><a href="#"><i class="fas fa-gift"></i>Gift Ideas </a></li>
+                                        <li><a href="#"><i class="fas fa-gamepad"></i>Toy Games </a></li>
+                                        <li><a href="#"><i class="fas fa-utensils"></i>Cooking </a></li>
+                                        <li><a href="#"><i class="fas fa-mobile"></i>Smart Phone </a></li>
+                                        <li><a href="#"><i class="fas fa-camera"></i>Cameras & Photo </a></li>
+                                        <li><a href="#"><i class="fas fa-gem"></i>Accesaries </a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Left dropDown menu part end -->
+
+                <!-- Mid dropDown menu part start -->
+                <div class="col-lg-6">
+                    <div class="mid_dropDown align-items-center">
+                        <div class="main_menu">
+                            <ul class="d-flex">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                                    <div class="main_mega_menu">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <div class="side_one">
+                                                    <h3>Shop Pages</h3>
+                                                    <ul>
+                                                        <li><a href="#">Banner With Sidebar</a></li>
+                                                        <li><a href="#">Boxed Banner</a></li>
+                                                        <li><a href="#">Full Width Banner</a></li>
+                                                        <li><a href="#">Horizontal Filter <span class="hot">Hot</span>
+                                                            </a></li>
+                                                        <li><a href="#">Off Canvas Sidebar <span
+                                                                    class="new">New</span></a></li>
+                                                        <li><a href="#">Infinite Ajax Scroll</a></li>
+                                                        <li><a href="#">Right Sidebar</a></li>
+                                                        <li><a href="#">Both Sidebar</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="side_two">
+                                                    <h3>Shop Layouts</h3>
+                                                    <ul>
+                                                        <li><a href="#">3 Columns Mode</a></li>
+                                                        <li><a href="#">4 Columns Mode</a></li>
+                                                        <li><a href="#">5 Columns Mode</a></li>
+                                                        <li><a href="#">6 Columns Mode </a></li>
+                                                        <li><a href="#">7 Columns Mode </a></li>
+                                                        <li><a href="#">8 Columns Mode</a></li>
+                                                        <li><a href="#">List Mode</a></li>
+                                                        <li><a href="#">List Mode Sidebar</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="side_three">
+                                                    <h3>Product Pages</h3>
+                                                    <ul>
+                                                        <li><a href="#">Variable Product</a></li>
+                                                        <li><a href="#">Featured & Sale</a></li>
+                                                        <li><a href="#">Data In Accordion</a></li>
+                                                        <li><a href="#">Data In Sections</a></li>
+                                                        <li><a href="#">Image Swatch </a></li>
+                                                        <li><a href="#">Extended Info</a></li>
+                                                        <li><a href="#">Without Sidebar</a></li>
+                                                        <li><a href="#">360o & Video <span class="new">New</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="side_four">
+                                                    <h3>Product Layouts</h3>
+                                                    <ul>
+                                                        <li><a href="#">Default <span class="hot">Hot</span> </a></li>
+                                                        <li><a href="#">Vertical Thumbs</a></li>
+                                                        <li><a href="#"> Grid Images</a></li>
+                                                        <li><a href="#">Masonry </a></li>
+                                                        <li><a href="#">Gallery</a></li>
+                                                        <li><a href="#">Sticky Info</a></li>
+                                                        <li><a href="#">Sticky Thumbs</a></li>
+                                                        <li><a href="#"> Sticky Both</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="vendor.html">Vendor <i class="fas fa-chevron-down"></i></a>
+                                    <div class="vendor_outerDrop">
+                                        <ul>
+                                            <li><a href="#">Store Listing <i class="fas fa-chevron-right"></i> </a>
+                                                <div class="vender_innderDrop_one">
+                                                    <ul>
+                                                        <li><a href="#">Store Listing 1</a></li>
+                                                        <li><a href="#">Store Listing 2</a></li>
+                                                        <li><a href="#">Store Listing 3</a></li>
+                                                        <li><a href="#">Store Listing 4</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#">Vendor Store <i class="fas fa-chevron-right"></i> </a>
+                                                <div class="vender_innderDrop_two">
+                                                    <ul>
+                                                        <li><a href="#">Vendor Store 1</a></li>
+                                                        <li><a href="#">Vendor Store 2</a></li>
+                                                        <li><a href="#">Vendor Store 3</a></li>
+                                                        <li><a href="#">Vendor Store 4</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="blog.html">Blogs <i class="fas fa-chevron-down"></i></a></li>
+                                <li><a href="pages.html">Pages <i class="fas fa-chevron-down"></i></a>
+                                    <div class="pages_mega">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="pages_dropDown">
+                                                    <ul>
+                                                        <li><a href="about.html"> About Us </a></li>
+                                                        <li><a href="become-vendor.html">Become A Vendor</a></li>
+                                                        <li><a href="contact.html">Contact Us</a></li>
+                                                        <li><a href="faq.html">FAQs</a></li>
+                                                        <li><a href="404.html">Error 404</a></li>
+                                                        <li><a href="coming-soon.html"> Coming Soon</a></li>
+                                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                                        <li><a href="cart.html">Cart</a></li>
+                                                        <li><a href="checkout.html">Checkout</a></li>
+                                                        <li><a href="my-account.html">My Account</a></li>
+                                                        <li><a href="compare.html">Compare</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="elements.html">Elements <i class="fas fa-chevron-down"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mid dropDown menu part end -->
+                <!-- Right dropDown menu part start -->
+                <div class="col-lg-3 align-self-center">
+                    <div class="right_dropDown">
+                        <ul class="d-flex justify-content-end">
+                            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Track Order</a></li>
+                            <li><a href="#"><i class="fas fa-tag"></i> Daily Deals</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right dropDown menu part end -->
+            </div>
+        </div>
+    </nav>
+    <!-- =======================================================================
+                            Menu part end
+    ======================================================================= -->
+
+
+    <!-- =======================================================================
+                            Blog banner part start
+    ======================================================================= -->
+    <section id="blogBanner_part">
+        <div class="container px-lg-0">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blogBanner_text text-center">
+                        <h1>Classic</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================================================================
+                            Blog banner part end
+    ======================================================================= -->
+
+    <!-- =======================================================================
+                            Breadcrumb start
+    ======================================================================= -->
+    <section id="breadCrumb_part">
+        <div class="container px-lg-0">
+            <div class="row blog_breadCrumb">
+                <div class="col-lg-12">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                            <li class="breadcrumb-item active" aria-current="page">Classic</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================================================================
+                            Breadcrumb end
+    ======================================================================= -->
+    <!-- =======================================================================
+                            Blog page content start
+    ======================================================================= -->
+    <section id="blogPage_content">
+        <div class="container px-lg-0">
+            <div class="row">
+                <!-- Page content left start -->
+                <div class="col-lg-9">
+                    <!-- Post one start -->
+                    <div class="pageContent_left mb-5">
+                        <div class="pageContent_img">
+                            <img src="./images/blog/pageContent1.jpg" alt="pageContent1" class="img-fluid w-100">
+                        </div>
+                        <div class="pageContent_details">
+                            <a href="#">Fashion</a>
+                            <div class="post_title">
+                                <h4><a href="#">New found the men dress for summer</a></h4>
+                                <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+                                    eget blandit nunc tortor eu nibh. Suspendisse potenti.Sed egstas, ant at
+                                    vulputate volutpat, uctus metus libero eu augue, vitae luctus…
+                                    <span><a href="#">(read more)</a></span>
+                                </p>
+                            </div>
+                            <div class="post_meta">
+                                <p>by <a href="#" class="post_author">Saymoon Zhilik</a> <a href="#" class="post_date">-
+                                        19.10.21</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post one end -->
+                    <!-- Post two start -->
+                    <div class="pageContent_left mb-5">
+                        <div class="pageContent_img">
+                            <img src="./images/blog/pageContent2.jpg" alt="pageContent2" class="img-fluid w-100">
+                        </div>
+                        <div class="pageContent_details">
+                            <a href="#">Fashion</a>
+                            <div class="post_title">
+                                <h4><a href="#">New found the men dress for summer</a></h4>
+                                <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+                                    eget blandit nunc tortor eu nibh. Suspendisse potenti.Sed egstas, ant at
+                                    vulputate volutpat, uctus metus libero eu augue, vitae luctus…
+                                    <span><a href="#">(read more)</a></span>
+                                </p>
+                            </div>
+                            <div class="post_meta">
+                                <p>by <a href="#" class="post_author">Saymoon Zhilik</a> <a href="#" class="post_date">-
+                                        19.10.21</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post two end -->
+
+                    <!-- Post two start -->
+                    <div class="pageContent_left mb-5">
+                        <div class="pageContent_img">
+                            <img src="./images/blog/pageContent3.jpg" alt="pageContent3" class="img-fluid w-100">
+                        </div>
+                        <div class="pageContent_details">
+                            <a href="#">Fashion</a>
+                            <div class="post_title">
+                                <h4><a href="#">New found the men dress for summer</a></h4>
+                                <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+                                    eget blandit nunc tortor eu nibh. Suspendisse potenti.Sed egstas, ant at
+                                    vulputate volutpat, uctus metus libero eu augue, vitae luctus…
+                                    <span><a href="#">(read more)</a></span>
+                                </p>
+                            </div>
+                            <div class="post_meta">
+                                <p>by <a href="#" class="post_author">Saymoon Zhilik</a> <a href="#" class="post_date">-
+                                        19.10.21</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post two end -->
+
+                    <!-- Post three start -->
+                    <div class="pageContent_left mb-5">
+                        <div class="pageContent_img">
+                            <img src="./images/blog/pageContent4.jpg" alt="pageContent4" class="img-fluid w-100">
+                        </div>
+                        <div class="pageContent_details">
+                            <a href="#">Fashion</a>
+                            <div class="post_title">
+                                <h4><a href="#">New found the men dress for summer</a></h4>
+                                <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+                                    eget blandit nunc tortor eu nibh. Suspendisse potenti.Sed egstas, ant at
+                                    vulputate volutpat, uctus metus libero eu augue, vitae luctus…
+                                    <span><a href="#">(read more)</a></span>
+                                </p>
+                            </div>
+                            <div class="post_meta">
+                                <p>by <a href="#" class="post_author">Saymoon Zhilik</a> <a href="#" class="post_date">-
+                                        19.10.21</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post three end -->
+
+                    <!-- Post four start -->
+                    <div class="pageContent_left mb-5">
+                        <div class="pageContent_img">
+                            <img src="./images/blog/pageContent5.jpg" alt="pageContent5" class="img-fluid w-100">
+                        </div>
+                        <div class="pageContent_details">
+                            <a href="#">Fashion</a>
+                            <div class="post_title">
+                                <h4><a href="#">New found the men dress for summer</a></h4>
+                                <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+                                    eget blandit nunc tortor eu nibh. Suspendisse potenti.Sed egstas, ant at
+                                    vulputate volutpat, uctus metus libero eu augue, vitae luctus…
+                                    <span><a href="#">(read more)</a></span>
+                                </p>
+                            </div>
+                            <div class="post_meta">
+                                <p>by <a href="#" class="post_author">Saymoon Zhilik</a> <a href="#" class="post_date">-
+                                        19.10.21</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post four end -->
+
+                    <!-- Post five start -->
+                    <div class="pageContent_left mb-5">
+                        <div class="pageContent_img">
+                            <img src="./images/blog/pageContent6.jpg" alt="pageContent6" class="img-fluid w-100">
+                        </div>
+                        <div class="pageContent_details">
+                            <a href="#">Fashion</a>
+                            <div class="post_title">
+                                <h4><a href="#">New found the men dress for summer</a></h4>
+                                <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+                                    eget blandit nunc tortor eu nibh. Suspendisse potenti.Sed egstas, ant at
+                                    vulputate volutpat, uctus metus libero eu augue, vitae luctus…
+                                    <span><a href="#">(read more)</a></span>
+                                </p>
+                            </div>
+                            <div class="post_meta">
+                                <p>by <a href="#" class="post_author">Saymoon Zhilik</a> <a href="#" class="post_date">-
+                                        19.10.21</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post five end -->
+
+                    <!-- Pagination start -->
+                    <div class="pagination_part">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-arrow-left"></i>
+                                        Prev</a></li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next <i
+                                            class="fas fa-arrow-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Pagination end -->
+                </div>
+                <!-- Page content left end -->
+                <div class="col-lg-3">
+                    <!-- Page content right start -->
+                    <div class="pageContent_right">
+                        <div class="right_fixed">
+                            <!-- Search bar start -->
+                            <div class="search_bar">
+                                <div class="search_input">
+                                    <input type="search" placeholder="Search in Blog">
+                                    <div class="search_icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Search bar end -->
+                            <!-- Categories start -->
+                            <div class="categories">
+                                <div class="cat_title">
+                                    <h4>Categories</h4>
+                                </div>
+                                <div class="cat_content">
+                                    <ul>
+                                        <li><a href="#">Cloths</a></li>
+                                        <li><a href="#">Entertainment</a></li>
+                                        <li><a href="#">Fashion</a></li>
+                                        <li><a href="#">Life style</a></li>
+                                        <li><a href="#">Others</a></li>
+                                        <li><a href="#">Shoes</a></li>
+                                        <li><a href="#">Technology</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Categories end -->
+                            <!-- Popular post start -->
+                            <div class="post_slider">
+                                <div class="popular_post">
+                                    <h3>Popular Posts</h3>
+                                    <div class="post d-flex">
+                                        <div class="post_img">
+                                            <img src="./images/blog/post1.jpg" alt="post1" class="img-fluid w-100">
+                                        </div>
+                                        <div class="post_content align-self-center">
+                                            <div class="post_meta">
+                                                <a href="#">March 1, 2021</a>
+                                                <h4>Fashion tells about who you are from external point</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post d-flex">
+                                        <div class="post_img">
+                                            <img src="./images/blog/post2.jpg" alt="post2" class="img-fluid w-100">
+                                        </div>
+                                        <div class="post_content align-self-center">
+                                            <div class="post_meta">
+                                                <a href="#">March 5, 2021</a>
+                                                <h4>Fashion tells about who you are from external point</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post d-flex">
+                                        <div class="post_img">
+                                            <img src="./images/blog/post4.jpg" alt="post4" class="img-fluid w-100">
+                                        </div>
+                                        <div class="post_content align-self-center">
+                                            <div class="post_meta">
+                                                <a href="#">March 7, 2021</a>
+                                                <h4>Fashion tells about who you are from external point</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="popular_post">
+                                    <h3>Popular Posts</h3>
+                                    <div class="post d-flex">
+                                        <div class="post_img">
+                                            <img src="./images/blog/post5.jpg" alt="post5" class="img-fluid w-100">
+                                        </div>
+                                        <div class="post_content align-self-center">
+                                            <div class="post_meta">
+                                                <a href="#">March 1, 2021</a>
+                                                <h4>Fashion tells about who you are from external point</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post d-flex">
+                                        <div class="post_img">
+                                            <img src="./images/blog/post6.jpg" alt="post6" class="img-fluid w-100">
+                                        </div>
+                                        <div class="post_content align-self-center">
+                                            <div class="post_meta">
+                                                <a href="#">March 5, 2021</a>
+                                                <h4>Fashion tells about who you are from external point</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post d-flex">
+                                        <div class="post_img">
+                                            <img src="./images/blog/post3.jpg" alt="post3" class="img-fluid w-100">
+                                        </div>
+                                        <div class="post_content align-self-center">
+                                            <div class="post_meta">
+                                                <a href="#">March 7, 2021</a>
+                                                <h4>Fashion tells about who you are from external point</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Popular post end -->
+                            <!-- Custom block start -->
+                            <div class="custom_block">
+                                <h3>Custom Block</h3>
+                                <p>Fringilla urna porttitor rhoncus dolor purus. Luctus veneneratis lectus magna fring.
+                                    Suspendisse potenti. Sed egestas, ante et vulputate volutpat, uctus metus libero.
+                                </p>
+                            </div>
+                            <!-- Custom block end -->
+                            <!-- Browse tag start -->
+                            <div class="browse_tag">
+                                <h3>Browse Tags</h3>
+                                <div class="tag_body">
+                                    <a href="#">Fashion</a>
+                                    <a href="#">Style</a>
+                                    <a href="#">Travel</a>
+                                    <a href="#">Women</a>
+                                    <a href="#">Men</a>
+                                    <a href="#">Hobbies</a>
+                                    <a href="#">Shopping</a>
+                                    <a href="#">Photography</a>
+                                </div>
+                            </div>
+                            <!-- Browse tag end -->
+                            <!-- Calender start -->
+                            <div class="calender_main">
+                                <h3>Calender</h3>
+                                <div class="calendar"></div>
+                            </div>
+                            <!-- Calender end -->
+                        </div>
+                    </div>
+                    <!-- Page content right end -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================================================================
+                            Blog page content end
+    ======================================================================= -->
+
+    <!-- =======================================================================
+                            Blog subscribe part start
+    ======================================================================= -->
+    <section id="subscribe_part">
+        <div class="container px-lg-0">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="subscribe_content d-flex">
+                        <div class="sub_icon align-self-center">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="sub_text align-self-center">
+                            <h4 class="text-uppercase">Subscribe To Our Newsletter</h4>
+                            <p>Get all the latest information on Events, Sales and Offers. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 align-self-center text-end">
+                    <div class="subscribe_search ">
+                        <form action="#">
+                            <input type="text" placeholder="Enter your e-mail">
+                            <button>subscribe <i class="fas fa-long-arrow-alt-right"></i> </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================================================================
+                            Blog subscribe part end
+    ======================================================================= -->
+
+    <!-- =======================================================================
+                            Blog footer part start
+    ======================================================================= -->
+    <section id="footer_part">
+        <div class="container px-lg-0">
+            <!-- footer top start -->
+            <div class="footer_top">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footerTopFirst_content">
+                            <div class="footer_logo">
+                                <img src="./images/home/logo.png" alt="logo" width="145px" height="50px">
+                            </div>
+                            <p class="widget_title">Got Question? Call us 24/7</p>
+                            <a class="widget_number" href="callto:18005707777">1-800-570-7777</a>
+                            <p class="widget_text">Register now to get updates on pronot get
+                                <span>up icons & coupons ster now toon.</span>
+                            </p>
+                            <div class="footerTop_icon">
+                                <ul class="d-flex">
+                                    <li><i class="fab fa-facebook" style="background-color: #1b4f9b;"></i></li>
+                                    <li><i class="fab fa-twitter" style="background-color: #00adef;"></i></li>
+                                    <li><i class="fab fa-instagram" style="background-color: #cc0001;"></i></li>
+                                    <li><i class="fab fa-pinterest" style="background-color: #2c567e;"></i></li>
+                                    <li><i class="fab fa-youtube" style="background-color: #f96a02;"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="footerTopSecond_content">
+                            <div class="footer_title align-self-center">
+                                <h3>Company</h3>
+                            </div>
+                            <div class="footer_text">
+                                <ul>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                        <a href="#">Team Member</a>
+                                        <a href="#">Career</a>
+                                        <a href="#">Contact Us</a>
+                                        <a href="#">Affilate</a>
+                                        <a href="#">Order History</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 offset-lg-1">
+                        <div class="footerTopSecond_content">
+                            <div class="footer_title align-self-center">
+                                <h3>My Account</h3>
+                            </div>
+                            <div class="footer_text">
+                                <ul>
+                                    <li>
+                                        <a href="#">Track My Order</a>
+                                        <a href="#">View Cart</a>
+                                        <a href="#">Sign In</a>
+                                        <a href="#">Help</a>
+                                        <a href="#">My Wishlist</a>
+                                        <a href="#">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 offset-lg-1">
+                        <div class="footerTopSecond_content">
+                            <div class="footer_title align-self-center">
+                                <h3>Customer Service</h3>
+                            </div>
+                            <div class="footer_text">
+                                <ul>
+                                    <li>
+                                        <a href="#">Payment Methods</a>
+                                        <a href="#">Money-back guarantee!</a>
+                                        <a href="#">Product Returns</a>
+                                        <a href="#">Support Center</a>
+                                        <a href="#">Shipping</a>
+                                        <a href="#">Term and Conditions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer top end -->
+            <!-- footer mid start -->
+            <div class="footer_mid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footerMid_content">
+                            <ul>
+                                <li>
+                                    <h3>Consumer Electric: <a href="#">TV Television|</a> <a href="#">Air Condition
+                                            |</a> <a href="#">Refrigerator |</a> <a href="#">Washing Machine |</a> <a
+                                            href="#">Audio Speaker |</a> <a href="#">Security Camera |</a> <a
+                                            href="#">View All </a> </h3>
+                                </li>
+                                <li>
+                                    <h3>Clothing & Apparel: <a href="#">Men's T-shirt |</a> <a href="#">Dresses |</a> <a
+                                            href="#">Men's Sneacker |</a> <a href="#">Leather Backpack |</a> <a
+                                            href="#">Watches |</a> <a href="#">Jeans |</a> <a href="#">Sunglasses |</a>
+                                        <a href="#">Boots |</a> <a href="#">Rayban |</a> <a href="#">Acccessories</a>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <h3>Home, Garden & Kitchen: <a href="#">Sofa|</a> <a href="#">Chair |</a> <a
+                                            href="#">Bed Room|</a> <a href="#">Living Room |</a> <a href="#">Cookware
+                                            |</a> <a href="#">Blender |</a> <a href="#">Garden Equipments|</a> <a
+                                            href="#">Decor |</a> <a href="#">Library </a> </h3>
+                                </li>
+                                <li>
+                                    <h3>Clothing & Apparel: <a href="#">Men's T-shirt |</a> <a href="#">Dresses |</a> <a
+                                            href="#">Men's Sneacker |</a> <a href="#">Leather Backpack |</a> <a
+                                            href="#">Watches |</a> <a href="#">Jeans |</a> <a href="#">Sunglasses |</a>
+                                        <a href="#">Boots |</a> <a href="#">Rayban |</a> <a href="#">Acccessories</a>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <h3>Home, Garden & Kitchen: <a href="#">Sofa|</a> <a href="#">Chair |</a> <a
+                                            href="#">Bed Room|</a> <a href="#">Living Room |</a> <a href="#">Cookware
+                                            |</a> <a href="#">Blender |</a> <a href="#">Garden Equipments|</a> <a
+                                            href="#">Decor |</a> <a href="#">Library </a> </h3>
+                                </li>
+                                <li>
+                                    <h3>Clothing & Apparel: <a href="#">Men's T-shirt |</a> <a href="#">Dresses |</a> <a
+                                            href="#">Men's Sneacker |</a> <a href="#">Leather Backpack |</a> <a
+                                            href="#">Watches |</a> <a href="#">Jeans |</a> <a href="#">Sunglasses |</a>
+                                        <a href="#">Boots |</a> <a href="#">Rayban |</a> <a href="#">Acccessories</a>
+                                    </h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer mid end -->
+            <!-- footer btm start -->
+            <div class="footer_btm">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="footerBtm_left">
+                            <p>Copyright © 2021 Zhilik. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 ">
+                        <div class="footerBtm_right d-flex">
+                            <div class="text">
+                                <p>We're using safe payment for</p>
+                            </div>
+                            <div class="payment">
+                                <img src="./images/home/payment.png" alt="payment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer btm end -->
+        </div>
+    </section>
+    <!-- =======================================================================
+                            Blog footer part end
+    ======================================================================= -->
+
+    <!-- =======================================================================
+                            Scroll top btn part start
+    ======================================================================= -->
+    <div class="scroll_btn">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <!-- =======================================================================
+                            Scroll top btn part end
+    ======================================================================= -->
+
+    <!-- Jquery link up -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap js link up -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Slick slider js link up -->
+    <script src="js/slick.min.js"></script>
+    <!-- Calender js link up -->
+    <script src="js/pignose.calendar.full.min.js"></script>
+    <!-- Inc/Dec js link up -->
+    <script src="js/jqueryui_1.12.1_jquery-ui.min.js"></script>
+    <!-- Stepper widget js link up -->
+    <script src="js/stepper.widget.js"></script>
+    <!-- Count down js link up -->
+    <script src="js/jquery.countdown.min.js"></script>
+    <!-- Jzoom link up -->
+    <script src="js/Jzoom.min.js"></script>
+    <!-- Calender js link up -->
+    <script src="js/calender.js"></script>
+    <!-- Blog right fix js link up -->
+    <script src="js/_blogRightFix.js"></script>
+    <!-- Main js link up -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

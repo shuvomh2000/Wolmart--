@@ -1,0 +1,9 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+@import "../extends/flex";
+
+.blog_breadCrumb{
+    border-bottom: 1px solid #ddd;
+}

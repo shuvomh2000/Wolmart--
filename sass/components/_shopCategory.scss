@@ -1,0 +1,42 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+
+#shopCategory_part{
+    margin-top: 35px;
+    .shopCategory_img{
+        ul{
+            li{
+                width: 120px;
+                height: 120px;
+                img{
+                    @include b-radius(50%);
+                    
+                }
+                .shopCategory_text{
+                    margin-top: 15px;
+                    h4{
+                        @include font_style(#333, 14px, 700, "Poppins");
+                        cursor: pointer;
+                    }
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                        -webkit-transform: scale(1.1);
+                        -moz-transform: scale(1.1);
+                        -ms-transform: scale(1.1);
+                        -o-transform: scale(1.1);
+                        box-shadow: 2px 1px 6px 1px #ccc;
+                    }
+                    .shopCategory_text{
+                        h4{
+                            color: $cmn_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

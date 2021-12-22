@@ -1,0 +1,145 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+
+
+
+#banner_part{
+    .banner_item{
+        padding: 62px 0;
+        height: 570px;
+        &:nth-child(3){
+            .banner_text{
+                margin-top: 100px;
+            }
+        }
+        .banner_img{
+           position: relative;
+           .second_img{
+               position: absolute;
+               right: 0;
+               top: 28px;
+           }
+        }
+        .banner_text{
+            h5{
+                @include font_style(#666, 40px, 400, "Poppins");
+                span{
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        bottom: 7px;
+                        width: 110px;
+                        height: 3px;
+                        background-color: #f77c29;
+                    }
+                }
+            }
+            h3{
+                @include font_style(#333, 44px, 700, "Poppins");
+                text-transform: uppercase;
+                margin-top: 10px;
+            }
+            p{
+                @include font_style(#666, 24px, 400, "Poppins");
+                span{
+                    @include font_style(#f77c29 , 24px, 700, "Poppins");
+                    text-transform: uppercase;
+                }
+            }
+            .banner_btn{
+                @include font_style(#333 , 14px, 600, "Poppins");
+                text-transform: uppercase;
+                padding: 10px 25px;
+                border: 2px solid #333;
+                @include b-radius(3px);
+                margin-top: 22px;
+                cursor: pointer;
+                &:hover{
+                    color: #fff;
+                    background-color: #333;
+                    border: 2px solid #333;
+                }
+                i{
+                    margin-left: 5px;
+                }
+            }
+        }
+        .last_part{
+            h5{
+                @include font_style(#666 , 24px, 400, "Poppins");
+                text-transform: uppercase;
+            }
+            h3{
+                @include font_style(#666 , 32px, 500, "Poppins");
+                text-transform: capitalize;
+                margin-top: 2px;
+            }
+            p{
+                @include font_style(#fff, 44px, 700, "Poppins");
+                text-transform: capitalize;
+                position: relative;
+                z-index: 1;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    left: 65px;
+                    top: 7px;
+                    background-color: #f77c29;
+                    width: 145px;
+                    height: 48px;
+                    transform: skew(-20deg);
+                    -webkit-transform: skew(-20deg);
+                    -moz-transform: skew(-20deg);
+                    -ms-transform: skew(-20deg);
+                    -o-transform: skew(-20deg);
+                    @include b-radius(3px);
+                    z-index: -1;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    left: 80px;
+                    bottom: 11px;
+                    background-color: #f77c29;
+                    width: 280px;
+                    height: 3px;
+                }
+                span{
+                    @include font_style(#333, 44px, 700, "Poppins");
+                    text-transform: lowercase;
+                    background-color: transparent;
+                }
+            }
+        }
+        .banner_img{
+            position: relative;
+        }
+    }
+    .slick-dots{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        bottom: 30px;
+        display: flex;
+        flex-wrap: w;
+        li{
+            margin: 0 5px;
+            button{
+                font-size: 0;
+                background: transparent;
+                width: 10px;
+                height: 10px;
+                border: 1px solid #333;
+                @include b-radius(50%);
+            }
+        }
+    }
+}

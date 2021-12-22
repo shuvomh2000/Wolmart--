@@ -1,0 +1,431 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+@import "../extends/flex";
+
+#shopMain_part{
+    padding: 50px 0 0;
+    .shop_filter{
+        h4{
+            @include font_style(#333, 16px, 600, "Poppins");
+        }
+    }
+    .cleanAll{
+        p{
+            @include font_style(#333, 14px, 500, "Poppins");
+            
+        }
+    }
+    .short_part{
+        .shortBy{
+            p{
+                @include font_style(#333, 14px, 700, "Poppins");
+                
+            }
+        }
+        .short_selcetion{
+            .form-select{
+                width: 150px;
+                @include font_style(#333, 12px, 400, "Poppins");
+                margin-top: -5px;
+                margin-left: 10px;
+            }
+        }
+    }
+    .show{
+        .show_select{
+            margin-right: 18px;
+            .form-select{
+                width: 100px;
+                @include font_style(#333, 12px, 400, "Poppins");
+                margin-top: -5px;
+                margin-left: 10px;
+            }
+        }
+        .show_icon{
+            i{
+                color: #ccc;
+                cursor: pointer;
+                &:first-child{
+                    margin-right: 5px;
+                    color: #333;
+                }
+                &:hover{
+                    color: #333;
+                }
+            }
+        }
+    }
+    .shopMain_left{
+        margin-top: 20px;
+        .allCategories{
+            p{
+                position: relative;
+                padding-bottom: 10px;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #ddd;
+                }
+                &::before{
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    width: 120px;
+                    height: 2px;
+                    background-color: #333;
+                    z-index: 1;
+                }
+                a{
+                    @include font_style(#333, 16px, 600, "Poppins");
+                    position: relative;
+                    display: block;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        right: 6px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 2px;
+                        height: 15px;
+                        background: #333;
+                        @include transition(.3s);
+                        transform: rotate(-90deg);
+                    }
+                }
+                .collapsed{
+                    position: relative;
+                    display: block;
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        right: 0;
+                        top: 18px;
+                        width: 15px;
+                        height: 2px;
+                        background: #333;
+                        @include transition(.3s);
+                    }
+                    &::after{
+                        transform: rotate(0);
+                    }
+                }
+            }
+            .collapse{
+                ul{
+                    li{
+                        a{
+                            @include font_style(#333, 14px, 400, "Poppins");
+                            padding: 8px 0;
+                            &:hover{
+                                color: $cmn_color;
+                            }
+                        }
+                    }
+                    margin-bottom: 30px;
+                }
+            }
+            .price{
+                p{
+                    &::before{
+                        width: 45px;
+                    }
+                }
+                .collapse{
+                    .priceMaxMin{
+                        margin-top: -15px;
+                        margin-bottom: 30px;
+                        input{
+                            width: 60px;
+                            padding: 5px 7px;
+                            margin-right: 30px;
+                            @include font_style(#ccc, 14px, 400, "Poppins");
+                            border: 1px solid #ccc;
+                            @include b-radius(3px);
+                        }
+                        .max_input{
+                            position: relative;
+                            &::after{
+                                position: absolute;
+                                content: "";
+                                right: 10px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 10px;
+                                height: 2px;
+                                background-color: #666;
+                            }
+                        }
+                        .min_input{
+                            margin-right: 5px;
+                        }
+                        .price_btn{
+                            a{
+                                @include font_style(#f4f4f4, 14px, 400, "Poppins");
+                                padding: 6px 10px;
+                                @include b-radius(3px);
+                                background-color: $cmn_color;
+                            }
+                        }
+                    }
+                }
+            }
+            .size{
+                p{
+                    &::before{
+                        width: 35px;
+                    }
+                }
+                .size_check{
+                    margin: 20px 0 30px 20px;
+                    .form-check{
+                        @include font_style(#333, 14px, 400, "Poppins");
+                        padding: 6px 0;
+                        &:hover{
+                            color: $cmn_color;
+                        }
+                    }
+                }
+            }
+            .brand{
+                p{
+                    &::before{
+                        width: 55px;
+                    }
+                }
+                .size_check{
+                    margin: 20px 0 30px 20px;
+                    .form-check{
+                        @include font_style(#333, 14px, 400, "Poppins");
+                        padding: 6px 0;
+                        &:hover{
+                            color: $cmn_color;
+                        }
+                    }
+                }
+            }
+            .color{
+                p{
+                    &::before{
+                        width: 45px;
+                    }
+                }
+                .size_check{
+                    margin: 20px 0 30px 20px;
+                    .form-check{
+                        @include font_style(#333, 14px, 400, "Poppins");
+                        padding: 6px 0;
+                        &:hover{
+                            color: $cmn_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .shopMain_right{
+        margin-top: 20px;
+        .shopMain_content{
+            &:nth-child(2),
+            &:nth-child(7),
+            &:nth-child(11){
+                .shopMain_right_img{
+                    img{
+                        &:nth-child(2){
+                            display: none;
+                        }
+                    }
+                    &:hover{
+                        img{
+                            &:first-child{
+                                display: none;
+                            }
+                            &:nth-child(2){
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .shopMain_right_img{
+                position: relative;
+                .ovly{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    box-shadow: 1px 1px 8px -3px #ccc;
+                    visibility: hidden;
+                    opacity: 0;
+                    ul{
+                        background-color: #fff;
+                        padding: 5px;
+                        @include b-radius(3px);
+                        li{
+                            a{
+                                i{
+                                    color: #333;
+                                    padding: 0 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .shop_contDown{
+                    position: absolute;
+                    width: 250px;
+                    color: #ddd;
+                    background-color: #333;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include b-radius(3px);
+                    justify-content: space-evenly;
+                    padding: 10px 0;
+                    .day,
+                    .hour,
+                    .minute,
+                    .second{
+                        font-size: 15px;
+                        font-weight: 700;
+                        span{
+                            display: block;
+                            margin-top: -5px;
+                            font-size: 13px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                &:hover{
+                    .ovly{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                    .shop_contDown{
+                        transform: scale(0);
+                    }
+                }
+            }
+        }
+        
+        .shopMain_right_text{
+            margin-top: 5px;
+            margin-bottom: 20px;
+            a{
+                @include font_style(#aaa, 11px, 400, "Poppins");
+                text-transform: uppercase;
+            }
+            h3{
+                margin-top: -17px;
+                a{
+                    @include font_style(#333, 13px, 500, "Poppins");
+                    text-transform: capitalize;
+                    &:hover{
+                        color: $cmn_color;
+                    }
+                }
+            }
+            .star_icon{
+                margin-bottom: 5px;
+                margin-left: 60px;
+                ul{
+                    li{
+                        color: #f93;
+                        i{
+                            font-size: 12px;
+                        }
+                        .disabled{
+                            color: #ddd;
+                        }
+                    }
+                }
+                .review{
+                    margin-left: 5px;
+                    margin-top: 5px;
+                    p{
+                        @include font_style(#aaa, 12px, 400, "Poppins");
+                        cursor: pointer;
+                        &:hover{
+                            color: $cmn_color;
+                        }
+                    }
+                }
+            }
+            .product_price{
+                h5{
+                    @include font_style(#020101, 16px, 500, "Poppins");
+
+                }
+            }
+        }
+        .shopMain_pagi{
+            margin-top: 40px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: -40px;
+                width: 100%;
+                height: 1px;
+                background-color: #ddd;
+            }
+            .pagi_left{
+                p{
+                    @include font_style(#aaa, 13px, 400, "Poppins");
+                    span{
+                        @include font_style(#333, 13px, 400, "Poppins");
+                        padding: 0 5px;
+                    }
+                }
+            }
+            .pagi_right{
+                ul{
+                    li{
+                        @include font_style(#333, 14px, 400, "Poppins");
+                        margin: 0 5px;
+                        a{
+                            color: #333;
+                            border: 0;
+                            i{
+                                margin: 0 5px;
+                            }
+                            &:hover{
+                                color: $cmn_color;
+                                background-color: transparent;
+                            }
+                        }
+                        &:first-child{
+                            a{
+                                color: #aaa;
+                            }
+                        }
+                        &:last-child{
+                            a{
+                                color: #666;
+                            }
+                        }
+                        &:nth-child(3){
+                            border: 1px solid transparent;
+                            &:hover{
+                                border-color:  #ddd;
+                                @include b-radius(3px);
+                            }
+                        }
+                    }
+                    .active{
+                        background: transparent;
+                        border: 1px solid #ddd;
+                        @include b-radius(3px);
+                    }
+                }
+            }
+        }
+    }
+}

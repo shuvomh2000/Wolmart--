@@ -1,0 +1,120 @@
+@import "../mixins/fontStyle";
+@import "../mixins/transition";
+@import "../variables/cmnColor";
+@import "../mixins/borderRadius";
+
+#blog_part{
+    margin-top: 60px;
+    .title_wrapper{
+        margin-bottom: 35px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -18px;
+            width: 100%;
+            height: 1px;
+            background-color: #ddd;
+        }
+        .title_left{
+            h2{
+                @include font_style(#333, 20px, 700, "Poppins");
+            }
+        }
+        .title_right{
+            a{
+                @include font_style(#333, 14px, 600, "Poppins");
+                &:hover{
+                    color: $cmn_color;
+                }
+            }
+        }
+    }
+    .blogContent_wrapper{
+        &:hover{
+            .blog_img{
+                img{
+                    transform: scale(1.2);
+                    -webkit-transform: scale(1.2);
+                    -moz-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    -o-transform: scale(1.2);
+                }
+            }
+        }
+        .blog_img{
+            margin-bottom: 16px;
+            overflow: hidden;
+            @include b-radius(3px);
+            img{
+                @include transition(.3s);
+                cursor: pointer;
+            }
+        }
+        .blog_text{
+            span{
+                @include font_style(#999999, 13px, 600, "Poppins");
+                a{
+                    &:first-child{
+                        @include font_style(#333, 14px, 600, "Poppins");
+                        margin-left: 5px;
+                        &:hover{
+                            color: $cmn_color;
+                        }
+                    }
+                    &:last-child{
+                        @include font_style(#333, 14px, 400, "Poppins");
+                        &:hover{
+                            color: $cmn_color;
+                        }
+                    }
+                }
+            }
+            p{
+                a{
+                    @include font_style(#333, 14px, 600, "Poppins");
+                    &:hover{
+                        color: $cmn_color;
+                    }
+                }
+            }
+            .blog_btn{
+                a{
+                    @include font_style(#333, 14px, 400, "Poppins");
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        bottom: -5px;
+                        width: 100%;
+                        height: 3px;
+                        background-color: #333;
+                        transform: scale(0);
+                        -webkit-transform: scale(0);
+                        -moz-transform: scale(0);
+                        -ms-transform: scale(0);
+                        -o-transform: scale(0);
+                        transition: transform .3s;
+                        -webkit-transition: transform .3s;
+                        -moz-transition: transform .3s;
+                        -ms-transition: transform .3s;
+                        -o-transition: transform .3s;
+                        transform-origin: 100% 0;
+                    }
+                    &:hover{
+                        &::after{
+                            transform-origin: 0 0;
+                            transform: scale(1);
+                            -webkit-transform: scale(1);
+                            -moz-transform: scale(1);
+                            -ms-transform: scale(1);
+                            -o-transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
